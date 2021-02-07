@@ -42,3 +42,22 @@ function hotelCost(days) {
 }
 
 console.log(`Result: ${hotelCost(8)}`);
+
+// Hotel Cost Function 
+function megaFriend(friends) {
+    if (friends.length == 0) {
+        return -1;
+    }
+
+    let output = "";
+
+    for (const name of friends) {
+        if (name.length > output.length) {
+            output = name;   
+        }
+    }
+
+    return output;
+}
+
+console.log(`Result: ${megaFriend(["Sourab", "Shafayet", "Sahin", "Fahad"])}`);
