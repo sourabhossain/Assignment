@@ -8,3 +8,14 @@ function kilometerToMeter(kilometer) {
 }
 
 console.log(`Result: ${kilometerToMeter(5)}`);
+
+// Budget Calculator Function
+function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
+    if (clockQuantity < 0 || phoneQuantity < 0 || laptopQuantity < 0) {
+        return -1;        
+    }
+
+    return ((clockQuantity * 50) + (phoneQuantity * 100) + (laptopQuantity * 500)).toFixed(2);
+}
+
+console.log(`Result: ${budgetCalculator(2, 3, 4)}`);
