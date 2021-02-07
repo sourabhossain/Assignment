@@ -1,17 +1,19 @@
 // Kilometer To Meter Conversion Function
 function kilometerToMeter(kilometer) {
-    if (kilometer < 0) {
+    kilometer = parseFloat(kilometer);
+
+    if (isNaN(kilometer) || kilometer < 0) {
         return -1;
     }
 
     return (kilometer * 1000).toFixed(2);
 }
 
-console.log(`Result: ${kilometerToMeter(5)}`);
+console.log(`Result: ${kilometerToMeter(100)}`);
 
 // Budget Calculator Function
 function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
-    if (clockQuantity < 0 || phoneQuantity < 0 || laptopQuantity < 0) {
+    if (!Number.isInteger(clockQuantity) || !Number.isInteger(phoneQuantity) || !Number.isInteger(laptopQuantity) || clockQuantity < 0 || phoneQuantity < 0 || laptopQuantity < 0) {
         return -1;        
     }
 
@@ -22,7 +24,7 @@ console.log(`Result: ${budgetCalculator(2, 3, 4)}`);
 
 // Hotel Cost Function 
 function hotelCost(days) {
-    if (days < 0) {
+    if (!Number.isInteger(days) || days < 0) {
         return -1;
     }
 
@@ -45,7 +47,7 @@ console.log(`Result: ${hotelCost(8)}`);
 
 // Hotel Cost Function 
 function megaFriend(friends) {
-    if (friends.length == 0) {
+    if (!Array.isArray(friends) || !friends.length) {
         return -1;
     }
 
