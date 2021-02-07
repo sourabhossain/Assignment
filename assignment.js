@@ -19,3 +19,26 @@ function budgetCalculator(clockQuantity, phoneQuantity, laptopQuantity) {
 }
 
 console.log(`Result: ${budgetCalculator(2, 3, 4)}`);
+
+// Hotel Cost Function 
+function hotelCost(days) {
+    if (days < 0) {
+        return -1;
+    }
+
+    let totalCost = 0;
+
+    if (days > 20) {
+        totalCost += ((days - 20) * 50);
+        days = 20;
+    }
+
+    if (days > 10) {
+        totalCost += ((days - 10) * 80);
+        days = 10;
+    }
+
+    return totalCost + (days * 100);
+}
+
+console.log(`Result: ${hotelCost(8)}`);
